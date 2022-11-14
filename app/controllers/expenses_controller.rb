@@ -5,7 +5,6 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    # @expenses = @category.expenses
     @expenses = @category.expenses
   end
 
@@ -55,7 +54,7 @@ class ExpensesController < ApplicationController
     @expense.destroy
 
     respond_to do |format|
-      format.html { redirect_to category_url, notice: 'Expense was successfully destroyed.' }
+      format.html { redirect_to category_path(@category), notice: 'Expense was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
