@@ -7,6 +7,7 @@ ruby '3.1.2'
 gem 'rails', '~> 7.0.4'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'main'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 

@@ -1,6 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @category %>
+<%= @category.expenses.count %>
+
+<div id="expenses">
+  <%= render @expenses %>
+</div>
 
 <div>
   <%= link_to "Edit this category", edit_category_path(@category) %> |

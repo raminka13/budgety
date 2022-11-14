@@ -9,4 +9,12 @@
     <%= category.icon %>
   </p>
 
+  <% @total_value = 0 %>
+  <% category.expenses.each do |expense| %>
+    <% @total_value += expense.amount %>
+  <% end %>
+  <p>Total:</p>
+  <p>$ <%= @total_value %></p>
+
+  <%= link_to "New expense", new_category_expense_path(category) %>
 </div>

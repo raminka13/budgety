@@ -6,7 +6,12 @@
 
   <p>
     <strong>Amount:</strong>
-    <%= expense.amount %>
+    $ <%= expense.amount %>
   </p>
 
+  <%= link_to "Edit this expense", edit_category_expense_path(@category, expense) %>
+
+  <% expense.categories.each do |category| %>
+    <%= category.icon %>
+  <% end %>
 </div>

@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :set_user
   before_action :set_category, only: %i[show edit update destroy]
 
   # GET /categories or /categories.json
@@ -7,11 +8,13 @@ class CategoriesController < ApplicationController
   end
 
   # GET /categories/1 or /categories/1.json
-  def show; end
+  def show
+    @expenses = @category.expenses.order(created_at: :desc)
+  end
 
   # GET /categories/new
   def new
-    @category = Category.new
+    @category = @user.categories.build
   end
 
   # GET /categories/1/edit
@@ -19,7 +22,7 @@ class CategoriesController < ApplicationController
 
   # POST /categories or /categories.json
   def create
-    @category = Category.new(category_params)
+    @category = @user.categories.build(category_params)
 
     respond_to do |format|
       if @category.save
@@ -56,6 +59,10 @@ class CategoriesController < ApplicationController
   end
 
   private
+
+  def set_user
+    @user = current_user
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_category
