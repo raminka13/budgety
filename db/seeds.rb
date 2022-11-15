@@ -8,7 +8,7 @@
 # require 'faker'
 
 1.times do
-  User.create(name: Faker::Name.name)
+  User.create(name: Faker::Name.name, email: 'test@test.com', password: '12345678')
 end
 
 Category.create(name: 'Arts', icon: '🎨', user_id: 1)
