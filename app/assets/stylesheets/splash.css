@@ -1,0 +1,21 @@
+.splash-container {
+  margin-top: 25%;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.splash-logo {
+  width: 40%;
+  height: auto;
+  margin: 1rem 27%;
+}
+
+.splash-title {
+  font-size: 45px;
+  width: 100%;
+  text-align: center;
+}

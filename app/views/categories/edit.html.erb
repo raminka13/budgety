@@ -1,10 +1,3 @@
-<h1>Editing category</h1>
+<% provide(:title, "EDIT CATEGORY") %>
 
 <%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Show this category", @category %> |
-  <%= link_to "Back to categories", categories_path %>
-</div>

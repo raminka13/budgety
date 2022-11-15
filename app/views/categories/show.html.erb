@@ -1,17 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<% provide(:title, "CATEGORY") %>
 <% if can? :manage, @category %>
-  <%= render @category %>
-
-  <%= link_to "New expense", new_category_expense_path(@category, @expense) %>
-  <div id="expenses">
+  <div id="categories" class="inner-container flex" >
+    <%= render @category %>
+  </div>
+  <div id="expenses" class="inner-container flex">
     <%= render @expenses %>
   </div>
 
-  <div>
-    <%= link_to "Edit this category", edit_category_path(@category) %> |
-    <%= link_to "Back to categories", categories_path %>
-    <%= button_to "Destroy this category", @category, method: :delete %>
-  </div>
+  <%= link_to "New expense", new_category_expense_path(@category, @expense), class: "btn-main" %>
+  <%= link_to "Edit this category", edit_category_path(@category), class: "btn-white" %>
 <% else %>
-<h2>Not your CATEGORY. Go Back.</h2>
+    <h2>Not your CATEGORY. Go Back.</h2>
 <% end %>
