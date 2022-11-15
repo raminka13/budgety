@@ -14,6 +14,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = @category.expenses.build
+    @expense.category_ids = @category.id
   end
 
   # GET /expenses/1/edit
