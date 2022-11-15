@@ -9,7 +9,7 @@
     $ <%= expense.amount %>
   </p>
 
-  <%= link_to "Edit this expense", edit_category_expense_path(@category, expense) %>
+  <%= link_to "✎", edit_category_expense_path(@category, expense) %>
 
   <% expense.categories.each do |category| %>
     <%= category.icon %>

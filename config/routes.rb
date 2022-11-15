@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root "splash#index"
 
   resources :categories do
-    resources :expenses
+    resources :expenses, only: [:new, :create, :edit, :update]
   end
 
   resources :users, only: [:edit, :update]

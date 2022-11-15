@@ -6,6 +6,7 @@ ruby '3.1.2'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
+gem 'cancancan'
 gem 'devise'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'main'
 gem 'rubocop', '>= 1.0', '< 2.0'

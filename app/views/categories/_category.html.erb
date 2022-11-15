@@ -10,6 +10,4 @@
   </p>
   <p>Total:</p>
   <p>$ <%= category.expenses.sum(:amount) %></p>
-
-  <%= link_to "New expense", new_category_expense_path(category.id) %>
 </div>

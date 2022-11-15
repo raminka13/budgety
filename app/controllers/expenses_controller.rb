@@ -40,7 +40,7 @@ class ExpensesController < ApplicationController
     respond_to do |format|
       if @expense.update(expense_params)
         format.html do
-          redirect_to category_expense_url(@category, @expense), notice: 'Expense was successfully updated.'
+          redirect_to category_url(@category), notice: 'Expense was successfully updated.'
         end
         format.json { render :show, status: :ok, location: @expense }
       else
