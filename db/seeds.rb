@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-# require 'faker'
+require 'faker'
 
 1.times do
   User.create(name: Faker::Name.name, email: 'test@test.com', password: '12345678')
