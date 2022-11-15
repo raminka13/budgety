@@ -1,17 +1,17 @@
-<div id="<%= dom_id expense %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expense.name %>
+<div id="<%= dom_id expense %>" class="card flex exp">
+  <p class="exp-name">
+    <strong><%= expense.name %></strong>
   </p>
 
-  <p>
-    <strong>Amount:</strong>
-    $ <%= expense.amount %>
+  <p class="exp-amount">
+    $
+    <strong><%= expense.amount %></strong>
   </p>
 
-  <%= link_to "✎", edit_category_expense_path(@category, expense) %>
-
-  <% expense.categories.each do |category| %>
-    <%= category.icon %>
-  <% end %>
+  <div class="exp-div">
+    <%= link_to "✎", edit_category_expense_path(@category, expense) %>
+    <% expense.categories.each do |category| %>
+      <p class="exp-icon"><%= category.icon %></p>
+    <% end %>
+  </div>
 </div>

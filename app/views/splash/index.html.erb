@@ -1,5 +1,10 @@
-<%= image_tag('pie_chart.png') %>
-<h1>Budgety</h1>
+<% provide(:title, "WELCOME") %>
+<div class='splash-container'>
+  <%= image_tag('pie_chart.png', class: 'splash-logo') %>
+  <h1 class='proxima-nova-bold splash-title'>Budgety</h1>
 
-<%= link_to 'Log In', new_user_session_path %>
-<%= link_to 'Sign Up', new_user_registration_path %>
+  <div class='btn-group flex'>
+    <%= link_to 'Log In', new_user_session_path, class: 'btn-main' %>
+    <%= link_to 'Sign Up', new_user_registration_path, class: 'btn-white' %>
+  </div>
+</div>
