@@ -1,4 +1,4 @@
-<%= form_with(model: [@category, expense]) do |form| %>
+<%= form_with(model: [@category, @expense]) do |form| %>
   <% if expense.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>

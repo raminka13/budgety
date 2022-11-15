@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
-  resources :categories do
-    resources :expenses
+  devise_for :users
+
+  authenticated :user do
+    root to: 'categories#index', as: :authenticated_root
   end
-  resources :users
+
+  root "splash#index"
+
+  resources :categories do
+    resources :expenses, only: [:new, :create, :edit, :update]
+  end
+
+  resources :users, only: [:edit, :update]
+
+  devise_scope :user do
+    get '/users/sign_out', to: 'devise/sessions#destroy'
+  end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root "categories#index"
+  # root "categories#index"
 end

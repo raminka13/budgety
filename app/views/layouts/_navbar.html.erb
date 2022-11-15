@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+<navbar>
+  <div>
+      <nav>
+        <ul>
+          <li><%= link_to '<', root_path %></li>
+          <li><%= yield(:title) %></li>
+          <li><%= link_to("Log out", destroy_user_session_path, method: :delete) %></li>
+        </ul>
+      </nav>
+  </div>
+</navbar>
+<%end%>

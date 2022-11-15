@@ -5,7 +5,6 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    # @expenses = @category.expenses
     @expenses = @category.expenses
   end
 
@@ -15,6 +14,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = @category.expenses.build
+    @expense.category_ids = @category.id
   end
 
   # GET /expenses/1/edit
@@ -40,7 +40,7 @@ class ExpensesController < ApplicationController
     respond_to do |format|
       if @expense.update(expense_params)
         format.html do
-          redirect_to category_expense_url(@category, @expense), notice: 'Expense was successfully updated.'
+          redirect_to category_url(@category), notice: 'Expense was successfully updated.'
         end
         format.json { render :show, status: :ok, location: @expense }
       else
@@ -55,7 +55,7 @@ class ExpensesController < ApplicationController
     @expense.destroy
 
     respond_to do |format|
-      format.html { redirect_to category_url, notice: 'Expense was successfully destroyed.' }
+      format.html { redirect_to category_path(@category), notice: 'Expense was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

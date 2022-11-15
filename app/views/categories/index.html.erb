@@ -5,10 +5,11 @@
 
 <div id="categories">
   <% @categories.each do |category| %>
+    <%= link_to category do %>
+    <div>
     <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
+    </div>
+    <% end %>
   <% end %>
 </div>
 
