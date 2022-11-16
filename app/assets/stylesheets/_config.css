@@ -8,6 +8,20 @@
   color: var(--color-text);
 }
 
+body {
+  background-color: #f2f2f2;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  height: fit-content;
+}
+
 :root {
   /* colors */
   --color-main: #3778c2;

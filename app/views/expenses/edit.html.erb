@@ -5,8 +5,6 @@
 <% else %>
     <h2>Not your CATEGORY. Go Back.</h2>
 <% end %>
-<br>
 
-<div>
-  <%= link_to "Back to Category", category_path(@category) %>
-</div>
+<%= link_to "Back to Category", category_path(@category), class: "btn-white" %>
+
