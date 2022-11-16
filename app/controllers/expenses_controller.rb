@@ -13,7 +13,7 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/new
   def new
-    @expense = @category.expenses.build
+    @expense = @user.expenses.build
     @expense.category_ids = @category.id
   end
 
@@ -22,7 +22,7 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @expense = @category.expenses.build(expense_params)
+    @expense = @user.expenses.build(expense_params)
 
     respond_to do |format|
       if @expense.save

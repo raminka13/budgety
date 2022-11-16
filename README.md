@@ -4,6 +4,13 @@
 # Budgety
 A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 ### Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+![](./screenshots/Screen%20Shot%202022-11-16%20at%209.46.04.png)
+![](./screenshots/Screen%20Shot%202022-11-16%20at%209.46.31.png)
+![](./screenshots/Screen%20Shot%202022-11-16%20at%209.46.38.png)
+![](./screenshots/Screen%20Shot%202022-11-16%20at%209.46.50.png)
+![](./screenshots/Screen%20Shot%202022-11-16%20at%209.46.56.png)
+![](./screenshots/Screen%20Shot%202022-11-16%20at%209.47.08.png)
+![](./screenshots/Screen%20Shot%202022-11-16%20at%209.47.18.png)
 
 ## Class diagram for the Database
 ![](budgety-erd_diagram.png)

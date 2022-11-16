@@ -1,3 +1,10 @@
 <% provide(:title, "EDIT CATEGORY") %>
 
-<%= render "form", category: @category %>
+<% if can? :manage, @category %>
+  <%= render "form", category: @category %>
+<% else %>
+    <h2>Not your CATEGORY. Go Back.</h2>
+<% end %>
+<div>
+  <%= link_to "Back to categories", categories_path, class: "btn-white" %>
+</div>
