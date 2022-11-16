@@ -40,46 +40,11 @@ RSpec.describe '/expenses', type: :request do
     end
   end
 
-  describe 'GET /new' do
-    it 'renders a successful response' do
-      get new_expense_url
-      expect(response).to be_successful
-    end
-  end
-
   describe 'GET /edit' do
     it 'renders a successful response' do
       expense = Expense.create! valid_attributes
       get edit_expense_url(expense)
       expect(response).to be_successful
-    end
-  end
-
-  describe 'POST /create' do
-    context 'with valid parameters' do
-      it 'creates a new Expense' do
-        expect do
-          post expenses_url, params: { expense: valid_attributes }
-        end.to change(Expense, :count).by(1)
-      end
-
-      it 'redirects to the created expense' do
-        post expenses_url, params: { expense: valid_attributes }
-        expect(response).to redirect_to(expense_url(Expense.last))
-      end
-    end
-
-    context 'with invalid parameters' do
-      it 'does not create a new Expense' do
-        expect do
-          post expenses_url, params: { expense: invalid_attributes }
-        end.to change(Expense, :count).by(0)
-      end
-
-      it "renders a response with 422 status (i.e. to display the 'new' template)" do
-        post expenses_url, params: { expense: invalid_attributes }
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
     end
   end
 
