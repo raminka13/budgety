@@ -19,7 +19,7 @@ main {
   align-items: flex-start;
   width: 100%;
   flex-wrap: wrap;
-  height: fit-content;
+  height: auto;
 }
 
 :root {
