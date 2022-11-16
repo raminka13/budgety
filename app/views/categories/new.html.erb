@@ -1,0 +1,8 @@
+<% provide(:title, "NEW CATEGORY") %>
+<% if can? :manage, @category %>
+  <%= render "form", category: @category %>
+<% else %>
+    <h2>Not your CATEGORY. Go Back.</h2>
+<% end %>
+
+  <%= link_to "Back to categories", categories_path, class: "btn-white" %>

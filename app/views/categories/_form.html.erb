@@ -1,0 +1,29 @@
+<%= form_with(model: category) do |form| %>
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :icon %>
+    <%= form.select :icon, [['🎲'], ['🚘'], ['🛒'], ['🍕'], ['📚'], ['🎞️'], ['🎶'], ['🍎'],
+     ['👾'], ['✍🏽'], ['🏃🏽'], ['❤️'], ['⭐'], ['🐶'], ['🌳'], ['🌎'], ['🌙'], ['💧'], ['☀️'], ['🌹'],
+     ['🏈'], ['🥊'], ['✈️'], ['🏕️'], ['🚲'], ['🔨'], ['📆'], ['📎'], ['🔒'], ['📌'], ['✂️'], ['🕙'],
+     ['🧳'], ['❤️'], ['⚽️'], ['🎾'], ['🤿'], ['🎨'], ['🎳'], ['🎮'], ['⛽️'], ['🏟'], ['📺'], ['🛎'],] %>
+  </div>
+
+  <div>
+    <%= form.submit class: "btn-main" %>
+  </div>
+<% end %>

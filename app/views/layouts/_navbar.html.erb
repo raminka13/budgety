@@ -1,0 +1,21 @@
+<nav id="navbar">
+  <div id="nav-container">
+    <div id="navbar-body">
+      <ul class="navbar-list">
+        <% if user_signed_in? %>
+          <li class="nav-item nav-back">
+            <%= link_to '◀︎', root_path %>
+          </li>
+        <% end %>
+          <li class="nav-item nav-title">
+            <%= yield(:title) %>
+          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item nav-logout">
+              <%= link_to("Log out", destroy_user_session_path, method: :delete) %>
+            </li>
+          <%end%>
+      </ul>
+    </div>
+  </div>
+</nav>

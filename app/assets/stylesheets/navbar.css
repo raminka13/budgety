@@ -1,0 +1,58 @@
+#navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 69px;
+  background-color: var(--color-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+  max-width: 720px;
+}
+
+#navbar-body {
+  width: 90%;
+  font-size: 18px;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-list {
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item,
+.nav-item a {
+  font-size: 13px;
+  font-weight: 200;
+  color: white;
+  width: 25%;
+  text-align: center;
+}
+
+.nav-back {
+  text-align: left;
+}
+
+.nav-title {
+  width: 50%;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.nav-logout {
+  text-align: right;
+}

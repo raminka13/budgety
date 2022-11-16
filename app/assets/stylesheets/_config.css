@@ -1,0 +1,42 @@
+* {
+  font-family: proxima-nova, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: var(--color-text);
+}
+
+body {
+  background-color: #f2f2f2;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+:root {
+  /* colors */
+  --color-main: #3778c2;
+  --color-second: #5fb523;
+  --color-text: #434b54;
+}
+
+.proxima-nova-bold {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.proxima-nova-light {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}

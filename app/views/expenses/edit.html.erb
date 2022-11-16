@@ -1,0 +1,10 @@
+<h1>Editing expense</h1>
+
+<% if can? :manage, @expense %>
+  <%= render "form", category: @expense %>
+<% else %>
+    <h2>Not your CATEGORY. Go Back.</h2>
+<% end %>
+
+<%= link_to "Back to Category", category_path(@category), class: "btn-white" %>
+

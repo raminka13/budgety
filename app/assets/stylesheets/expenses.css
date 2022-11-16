@@ -1,0 +1,40 @@
+.exp {
+  width: 96%;
+  background-color: white;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+  height: 63px;
+}
+
+.exp-name {
+  width: 50%;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.exp-amount {
+  width: 25%;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.exp-div {
+  width: 25%;
+  height: 90%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.exp-div a {
+  width: 100%;
+  font-size: large;
+}
+
+.exp-icon {
+  width: 20%;
+  margin-right: 2px;
+}

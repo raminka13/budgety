@@ -1,0 +1,22 @@
+#categories a {
+  width: 96%;
+  background-color: white;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+  height: 63px;
+}
+
+.cat-icon {
+  font-size: 36px;
+}
+
+.cat-name {
+  width: 50%;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.cat-total {
+  width: 30%;
+}

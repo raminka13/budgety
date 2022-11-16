@@ -1,0 +1,88 @@
+form {
+  margin-top: 0.5rem;
+  width: 96%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form div,
+form.edit_user div,
+form.new_user div {
+  margin: 0.15rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+form input[type=number],
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form textarea {
+  width: 99%;
+  background-color: white;
+  border: 1px solid #cbcbcb;
+  height: 45px;
+  padding-left: 9px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+form input[type=text],
+form input[type=email]::placeholder,
+form input[type=password]::placeholder {
+  text-align: left;
+  padding-left: 9px;
+  font-weight: 400;
+}
+
+#user_remember_me {
+  margin: 0.25rem;
+}
+
+.shared-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.shared-links a {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  transition: color 200ms ease-in-out;
+}
+
+.shared-links a:hover {
+  color: var(--color-main);
+}
+
+.cancel-acc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cancel-acc p {
+  width: 90%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+#category_icon {
+  font-size: 30px;
+}
+
+form div label {
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+}

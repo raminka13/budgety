@@ -1,0 +1,15 @@
+<%= link_to category do %>
+  <div id="<%= dom_id category %>" class="card flex">
+    <p class="cat-icon">
+      <strong><%= category.icon %></strong>
+    </p>
+
+    <p class="cat-name">
+      <strong><%= category.name %></strong>
+    </p>
+
+    <p class="cat-total">Total:
+      <strong>$ <%= category.expenses.sum(:amount) %></strong>
+    </p>
+  </div>
+<% end %>

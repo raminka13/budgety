@@ -6,11 +6,21 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous">
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag asset_path('pie-chart(1).png') %>
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <%= render partial: 'layouts/navbar' %>
+      <div class="container flex">
+        <h3 class="notice"><%= notice %></h3>
+        <h3 class="alert"><%= alert %></h3>
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>

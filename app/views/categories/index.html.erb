@@ -1,0 +1,13 @@
+<% provide(:title, "CATEGORIES") %>
+<h2 class='title'>
+<%= @user.name %>
+<%= link_to "✐", edit_user_registration_path %>
+</h2>
+
+<div id="categories" class="inner-container flex" >
+  <% @categories.each do |category| %>
+    <%= render category %>
+  <% end %>
+</div>
+
+<%= link_to "New category", new_category_path, class: "btn-main" %>
