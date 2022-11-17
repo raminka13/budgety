@@ -39,10 +39,15 @@
 
 .btn-main:hover {
   background-color: #87aeda;
+  text-shadow: 0 0 10px black;
+  opacity: 80%;
 }
 
 .btn-white:hover {
-  background-color: #c0cbf2;
+  background-color: var(--color-third);
+  color: white;
+  text-shadow: 0 0 10px black;
+  opacity: 80%;
 }
 
 .title {

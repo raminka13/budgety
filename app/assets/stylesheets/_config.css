@@ -24,9 +24,10 @@ main {
 
 :root {
   /* colors */
-  --color-main: #3778c2;
-  --color-second: #5fb523;
-  --color-text: #434b54;
+  --color-main: #122459;
+  --color-second: #f21905;
+  --color-text: #353a40;
+  --color-third: #41a664;
 }
 
 .proxima-nova-bold {

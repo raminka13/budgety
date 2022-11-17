@@ -1,13 +1,17 @@
 .notice,
 .alert {
-  margin-top: 0.5rem;
-  width: fit-content;
-  max-height: 20%;
-  background-color: var(--color-second);
+  width: 100%;
+  min-height: min-content;
+  background-color: var(--color-third);
   color: white;
   text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2.3rem;
+  opacity: 90%;
+  letter-spacing: 1px
 }
 
 .alert {
-  background-color: #b00707;
+  background-color: var(--color-second);
 }
